@@ -1,0 +1,29 @@
+.badge {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  padding: 4px 10px;
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  z-index: 2;
+}
+
+.novo {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.maisVendido {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+.desconto {
+  background-color: var(--color-white);
+  color: var(--color-red);
+  border: 1px solid var(--color-red);
+}
