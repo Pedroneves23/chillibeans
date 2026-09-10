@@ -13,13 +13,13 @@
   background-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.95) 0%,
-    rgba(0, 0, 0, 0.84) 45%,
-    rgba(0, 0, 0, 0.48) 75%,
-    rgba(0, 0, 0, 0.85) 100%
+    rgba(0, 0, 0, 0.82) 45%,
+    rgba(0, 0, 0, 0.22) 75%,
+    rgba(0, 0, 0, 0.48) 100%
   ),
-  url('/images/oculos-aviador-dourado.png');
+  url('/images/hero-elegancia-exclusiva.jpg');
   background-size: cover;
-  background-position: center 30%;
+  background-position: center;
   color: var(--color-white);
   padding: clamp(4rem, 8vw, 6rem) 0;
 }
@@ -222,13 +222,15 @@
 }
 
 .solarCard .categoryCardBg {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.85) 10%, rgba(0, 0, 0, 0.2) 70%),
-    url('/images/oculos-cat-eye-preto.png');
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 8%, rgba(0, 0, 0, 0.08) 78%),
+    url('/images/lifestyle/litoral-aviador.jpg');
+  background-position: center;
 }
 
 .grauCard .categoryCardBg {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.85) 10%, rgba(0, 0, 0, 0.2) 70%),
-    url('/images/oculos-havana.png');
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 8%, rgba(0, 0, 0, 0.1) 78%),
+    url('/images/lifestyle/museu-oculos-grau.jpg');
+  background-position: center;
 }
 
 .categoryContent {

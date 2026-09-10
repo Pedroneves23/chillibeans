@@ -14,6 +14,17 @@ const productImages = {
   optical: '/images/oculos-havana.png',
 };
 
+// Campanha editorial: cada produto recebe uma cena diferente e, no hover,
+// exibe a próxima cena para tornar o catálogo mais vivo.
+const lifestyleImages = [
+  '/images/lifestyle/litoral-aviador.jpg',
+  '/images/lifestyle/praia-havana.jpg',
+  '/images/lifestyle/cidade-cat-eye.jpg',
+  '/images/lifestyle/rooftop-redondo.jpg',
+  '/images/lifestyle/museu-oculos-grau.jpg',
+  '/images/lifestyle/parque-titanio.jpg',
+];
+
 const products = [
   {
     id: 1,
@@ -310,6 +321,11 @@ const products = [
     avaliacoes: 58,
   },
 ];
+
+products.forEach((product, index) => {
+  product.imagem = lifestyleImages[index % lifestyleImages.length];
+  product.imagemHover = lifestyleImages[(index + 1) % lifestyleImages.length];
+});
 
 export default products;
 

@@ -87,10 +87,10 @@ export default function ProductCard({ product }) {
       </Link>
 
       <div className={styles.info}>
-        <span className={styles.category}>{product.categoria}</span>
         <Link to={`/produto/${product.slug}`} className={styles.nameLink}>
           <h3 className={styles.name}>{product.nome}</h3>
         </Link>
+        <span className={styles.category}>{product.categoria}</span>
         <div className={styles.pricing}>
           {product.precoAnterior && (
             <span className={styles.oldPrice}>
