@@ -27,7 +27,7 @@ export default function About() {
         <div className={styles.contentGrid}>
           <div className={styles.imageBlock}>
             <img
-              src="https://images.unsplash.com/photo-1509695507497-903c140c43b0?w=800&fit=crop&q=80"
+              src="/images/oculos-cat-eye-preto.png"
               alt="Estilo e Atitude Chilli Beans"
               className={styles.storyImg}
             />
@@ -69,17 +69,23 @@ export default function About() {
           />
           <div className={styles.pillarsGrid}>
             <div className={styles.pillarCard}>
-              <Sparkles className={styles.pillarIcon} size={28} />
+              <div className={styles.pillarIconWrap}>
+                <Sparkles className={styles.pillarIcon} size={26} />
+              </div>
               <h3>Provocação Contínua</h3>
               <p>Designs que quebram o padrão conservador da ótica tradicional e expressam quem você é sem pedir desculpas.</p>
             </div>
             <div className={styles.pillarCard}>
-              <Eye className={styles.pillarIcon} size={28} />
+              <div className={styles.pillarIconWrap}>
+                <Eye className={styles.pillarIcon} size={26} />
+              </div>
               <h3>Engenharia Óptica</h3>
               <p>Lentes polarizadas com nitidez cristalina, proteção UV400 completa e tecnologia antirreflexo multicamadas.</p>
             </div>
             <div className={styles.pillarCard}>
-              <Award className={styles.pillarIcon} size={28} />
+              <div className={styles.pillarIconWrap}>
+                <Award className={styles.pillarIcon} size={26} />
+              </div>
               <h3>Acabamento Artesanal</h3>
               <p>Polimento manual de acetato, charneiras reforçadas com 5 a 7 dentes e encaixe ergonômico feito para o rosto brasileiro.</p>
             </div>

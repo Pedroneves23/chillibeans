@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ---- Selection ---- */
 ::selection {
-  background-color: var(--color-red);
+  background-color: var(--color-black);
   color: var(--color-white);
 }
 

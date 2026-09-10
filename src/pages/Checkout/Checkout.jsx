@@ -2,41 +2,48 @@ import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { ShieldCheck, CreditCard, QrCode, FileText, CheckCircle2, Lock, ArrowLeft } from 'lucide-react';
 import { useCart } from '../../contexts/CartContext';
-import { formatCurrency, formatInstallment } from '../../utils/formatCurrency';
+import { formatCurrency } from '../../utils/formatCurrency';
 import Button from '../../components/Button';
 import styles from './Checkout.module.css';
 
 export default function Checkout() {
   const navigate = useNavigate();
-  const { cart, cartTotal, clearCart } = useCart();
+  const { items, cartTotal, clearCart } = useCart();
+  const savedUser = (() => {
+    try {
+      return JSON.parse(localStorage.getItem('cb_user')) || {};
+    } catch {
+      return {};
+    }
+  })();
 
   const [step, setStep] = useState(1);
   const [paymentMethod, setPaymentMethod] = useState('pix');
   const [formData, setFormData] = useState({
-    nome: 'Pedro Silva',
-    email: 'pedro@email.com',
-    cpf: '123.456.789-00',
-    telefone: '(11) 98765-4321',
-    cep: '01419-000',
-    endereco: 'Alameda Santos',
-    numero: '1200',
-    complemento: 'Apto 45',
-    bairro: 'Cerqueira César',
-    cidade: 'São Paulo',
-    estado: 'SP',
-    cardNumber: '•••• •••• •••• 4242',
-    cardName: 'PEDRO SILVA',
-    cardExpiry: '12/28',
-    cardCvv: '•••',
+    nome: savedUser.nome || '',
+    email: savedUser.email || '',
+    cpf: '',
+    telefone: '',
+    cep: '',
+    endereco: '',
+    numero: '',
+    complemento: '',
+    bairro: '',
+    cidade: '',
+    estado: '',
+    cardNumber: '',
+    cardName: '',
+    cardExpiry: '',
+    cardCvv: '',
     installments: '1',
   });
 
   useEffect(() => {
     document.title = 'Checkout Seguro — CHILLI BEANS';
-    if (cart.length === 0) {
+    if (items.length === 0) {
       navigate('/carrinho');
     }
-  }, [cart, navigate]);
+  }, [items.length, navigate]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -51,15 +58,15 @@ export default function Checkout() {
     e.preventDefault();
     const orderDetails = {
       orderId: 'CB-' + Math.floor(100000 + Math.random() * 900000),
-      items: cart,
+      items,
       total: finalTotal,
       paymentMethod,
       customer: formData,
       date: new Date().toLocaleDateString('pt-BR'),
     };
     sessionStorage.setItem('cb_last_order', JSON.stringify(orderDetails));
-    clearCart();
     navigate('/checkout/sucesso');
+    clearCart();
   };
 
   return (
@@ -382,13 +389,13 @@ export default function Checkout() {
         <aside className={styles.orderSummary}>
           <h3 className={styles.summaryTitle}>ITENS DO PEDIDO</h3>
           <div className={styles.miniItemsList}>
-            {cart.map((item) => (
-              <div key={`${item.id}-${item.selectedColor || ''}`} className={styles.miniItem}>
+            {items.map((item) => (
+              <div key={`${item.id}-${item.cor || ''}`} className={styles.miniItem}>
                 <img src={item.imagem} alt={item.nome} className={styles.miniThumb} />
                 <div className={styles.miniInfo}>
                   <span className={styles.miniName}>{item.nome}</span>
-                  <span className={styles.miniQty}>Qtd: {item.quantity} {item.selectedColor && `• ${item.selectedColor}`}</span>
-                  <span className={styles.miniPrice}>{formatCurrency(item.preco * item.quantity)}</span>
+                  <span className={styles.miniQty}>Qtd: {item.quantidade} {item.cor && `• ${item.cor}`}</span>
+                  <span className={styles.miniPrice}>{formatCurrency(item.preco * item.quantidade)}</span>
                 </div>
               </div>
             ))}

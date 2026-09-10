@@ -13,7 +13,7 @@ export const generateOrderNumber = () => {
 export const calculateShipping = (subtotal, cep) => {
   if (!cep || cep.length < 8) return null;
 
-  const FREE_SHIPPING_THRESHOLD = 399;
+  const FREE_SHIPPING_THRESHOLD = 299;
 
   if (subtotal >= FREE_SHIPPING_THRESHOLD) {
     return { valor: 0, prazo: '3-5 dias úteis', tipo: 'Frete Grátis' };
@@ -29,7 +29,7 @@ export const calculateShipping = (subtotal, cep) => {
   }
 };
 
-export const FREE_SHIPPING_THRESHOLD = 399;
+export const FREE_SHIPPING_THRESHOLD = 299;
 
 /**
  * Valida CEP (formato brasileiro).

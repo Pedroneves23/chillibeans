@@ -45,29 +45,37 @@ export default function Home() {
       <section className={styles.valueBar}>
         <div className={`container ${styles.valueGrid}`}>
           <div className={styles.valueItem}>
-            <Shield className={styles.valueIcon} size={22} />
-            <div>
+            <div className={styles.valueIconWrap}>
+              <Shield className={styles.valueIcon} size={22} />
+            </div>
+            <div className={styles.valueText}>
               <h4 className={styles.valueTitle}>Proteção UV400 Total</h4>
               <p className={styles.valueDesc}>Lentes testadas e certificadas</p>
             </div>
           </div>
           <div className={styles.valueItem}>
-            <Truck className={styles.valueIcon} size={22} />
-            <div>
+            <div className={styles.valueIconWrap}>
+              <Truck className={styles.valueIcon} size={22} />
+            </div>
+            <div className={styles.valueText}>
               <h4 className={styles.valueTitle}>Frete Grátis Brasil</h4>
               <p className={styles.valueDesc}>Em compras a partir de R$ 299</p>
             </div>
           </div>
           <div className={styles.valueItem}>
-            <Award className={styles.valueIcon} size={22} />
-            <div>
+            <div className={styles.valueIconWrap}>
+              <Award className={styles.valueIcon} size={22} />
+            </div>
+            <div className={styles.valueText}>
               <h4 className={styles.valueTitle}>Garantia & Autenticidade</h4>
               <p className={styles.valueDesc}>Peças exclusivas numeradas</p>
             </div>
           </div>
           <div className={styles.valueItem}>
-            <Sparkles className={styles.valueIcon} size={22} />
-            <div>
+            <div className={styles.valueIconWrap}>
+              <Sparkles className={styles.valueIcon} size={22} />
+            </div>
+            <div className={styles.valueText}>
               <h4 className={styles.valueTitle}>Até 10x Sem Juros</h4>
               <p className={styles.valueDesc}>Parcelamento facilitado no cartão</p>
             </div>

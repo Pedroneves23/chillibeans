@@ -9,6 +9,7 @@ import styles from './Catalog.module.css';
 export default function Catalog() {
   const [searchParams, setSearchParams] = useSearchParams();
   const initialCat = searchParams.get('cat') || 'Todos';
+  const searchQuery = searchParams.get('busca')?.trim() || '';
 
   const [selectedCategory, setSelectedCategory] = useState(initialCat);
   const [selectedCollection, setSelectedCollection] = useState('Todas');
@@ -37,6 +38,14 @@ export default function Catalog() {
       result = result.filter((p) => p.colecao === selectedCollection);
     }
 
+    if (searchQuery) {
+      const normalizedQuery = searchQuery.toLocaleLowerCase('pt-BR');
+      result = result.filter((p) =>
+        [p.nome, p.categoria, p.colecao, p.descricao, ...p.cores, ...p.tags]
+          .some((value) => value.toLocaleLowerCase('pt-BR').includes(normalizedQuery))
+      );
+    }
+
     if (sortBy === 'price-asc') {
       result.sort((a, b) => a.preco - b.preco);
     } else if (sortBy === 'price-desc') {
@@ -49,16 +58,17 @@ export default function Catalog() {
     }
 
     return result;
-  }, [selectedCategory, selectedCollection, sortBy]);
+  }, [selectedCategory, selectedCollection, sortBy, searchQuery]);
 
   const handleCategoryChange = (cat) => {
     setSelectedCategory(cat);
+    const nextParams = new URLSearchParams(searchParams);
     if (cat === 'Todos') {
-      searchParams.delete('cat');
+      nextParams.delete('cat');
     } else {
-      searchParams.set('cat', cat);
+      nextParams.set('cat', cat);
     }
-    setSearchParams(searchParams);
+    setSearchParams(nextParams);
   };
 
   const handleClearFilters = () => {

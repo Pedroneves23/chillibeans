@@ -1,34 +1,36 @@
 .footer {
   background-color: var(--color-black);
   color: var(--color-white);
-  padding-top: var(--space-xl);
+  padding-top: clamp(3.5rem, 7vw, 6rem);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .newsletterBar {
-  padding-bottom: var(--space-xl);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  margin-bottom: var(--space-xl);
+  margin-bottom: clamp(2.75rem, 5vw, 4.5rem);
 }
 
 .newsletterInner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-lg);
+  gap: 2rem 3rem;
   flex-wrap: wrap;
 }
 
 .newsletterTitle {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  letter-spacing: 0.15em;
-  margin-bottom: var(--space-xs);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  margin-bottom: var(--space-3);
   color: var(--color-white);
 }
 
 .newsletterSubtitle {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
   color: var(--color-gray-500);
   max-width: 500px;
 }
@@ -84,24 +86,24 @@
 
 .main {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: var(--space-xl);
-  padding-bottom: var(--space-xl);
+  grid-template-columns: minmax(250px, 2fr) 1fr 1fr minmax(220px, 1.35fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
 }
 
 .brandLogo {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
+  font-size: 1.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   color: #ffffff;
   display: inline-block;
   margin-bottom: var(--space-sm);
 }
 
 .brandDesc {
-  font-size: 0.875rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.75;
   color: var(--color-gray-500);
   margin-bottom: var(--space-md);
   max-width: 320px;
@@ -130,10 +132,11 @@
 }
 
 .columnTitle {
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  letter-spacing: 0.15em;
-  margin-bottom: var(--space-md);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  margin-bottom: var(--space-5);
   color: #ffffff;
 }
 
@@ -143,12 +146,12 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .linksList a {
   color: var(--color-gray-500);
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   transition: color var(--duration-fast) ease;
 }
 
@@ -162,7 +165,7 @@
   margin: 0 0 var(--space-md) 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .contactItem {
@@ -170,7 +173,7 @@
   align-items: center;
   gap: 0.75rem;
   color: var(--color-gray-500);
-  font-size: 0.85rem;
+  font-size: 0.88rem;
 }
 
 .badgeSecurity {
@@ -195,7 +198,7 @@
 
 .bottomBar {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding: var(--space-md) 0;
+  padding: 1.35rem 0;
 }
 
 .bottomInner {
@@ -210,7 +213,7 @@
 
 .bottomLinks {
   display: flex;
-  gap: var(--space-md);
+  gap: var(--space-5);
 }
 
 @media (max-width: 900px) {

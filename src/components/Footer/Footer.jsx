@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Instagram, Facebook, Twitter, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Facebook, MessageCircle, ArrowRight } from 'lucide-react';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -47,8 +47,8 @@ export default function Footer() {
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className={styles.socialIcon}>
               <Facebook size={18} />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className={styles.socialIcon}>
-              <Twitter size={18} />
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className={styles.socialIcon}>
+              <MessageCircle size={18} />
             </a>
           </div>
         </div>

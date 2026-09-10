@@ -1,5 +1,5 @@
 .wrapper {
-  margin-bottom: var(--space-12);
+  margin-bottom: clamp(2.75rem, 5vw, 4.5rem);
 }
 
 .center {
@@ -14,11 +14,11 @@
   display: inline-block;
   font-family: var(--font-body);
   font-size: var(--text-xs);
-  font-weight: 500;
-  letter-spacing: var(--tracking-widest);
+  font-weight: 700;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-gray-500);
-  margin-bottom: var(--space-3);
+  color: var(--color-red);
+  margin-bottom: var(--space-4);
 }
 
 .dark .label {
@@ -27,9 +27,9 @@
 
 .title {
   font-family: var(--font-display);
-  font-size: clamp(var(--text-3xl), 4vw, var(--text-5xl));
-  font-weight: 500;
-  line-height: var(--leading-tight);
+  font-size: clamp(2.4rem, 4.6vw, 4.25rem);
+  font-weight: 600;
+  line-height: 0.98;
   letter-spacing: var(--tracking-tight);
   color: var(--color-black);
 }
@@ -40,11 +40,11 @@
 
 .subtitle {
   font-family: var(--font-body);
-  font-size: var(--text-md);
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
   color: var(--color-gray-600);
-  margin-top: var(--space-4);
-  max-width: 540px;
-  line-height: var(--leading-relaxed);
+  margin-top: var(--space-6);
+  max-width: 620px;
+  line-height: 1.75;
 }
 
 .center .subtitle {

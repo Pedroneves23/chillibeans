@@ -31,19 +31,23 @@
 .logo {
   text-decoration: none;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
 }
 
 .logoText {
   font-family: var(--font-display);
-  font-size: var(--text-xl);
-  font-weight: 700;
-  letter-spacing: var(--tracking-wide);
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
   color: var(--color-black);
-  transition: font-size var(--duration-normal) var(--ease-out);
+  text-transform: uppercase;
+  line-height: 1;
+  transition: all var(--duration-normal) var(--ease-out);
 }
 
 .scrolled .logoText {
-  font-size: var(--text-lg);
+  font-size: 1.55rem;
 }
 
 /* Nav */
@@ -184,7 +188,8 @@
   }
 
   .logoText {
-    font-size: var(--text-lg);
+    font-size: 1.5rem;
+    font-weight: 800;
   }
 
   .actions {

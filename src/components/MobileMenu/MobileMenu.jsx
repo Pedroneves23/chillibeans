@@ -7,6 +7,7 @@ const navLinks = [
   { to: '/mais-vendidos', label: 'Mais Vendidos' },
   { to: '/catalogo', label: 'Catálogo' },
   { to: '/sobre', label: 'Sobre Nossa Loja' },
+  { to: '/login', label: 'Minha Conta' },
   { to: '/carrinho', label: 'Sacola' },
 ];
 

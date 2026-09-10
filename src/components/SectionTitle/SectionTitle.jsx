@@ -5,6 +5,7 @@ export default function SectionTitle({
   title,
   subtitle,
   label,
+  description,
   align = 'center',
   dark = false,
 }) {
@@ -15,9 +16,9 @@ export default function SectionTitle({
       ref={ref}
       className={`${styles.wrapper} ${styles[align]} ${dark ? styles.dark : ''} animate-on-scroll`}
     >
-      {label && <span className={styles.label}>{label}</span>}
+      {(label || subtitle) && <span className={styles.label}>{label || subtitle}</span>}
       <h2 className={styles.title}>{title}</h2>
-      {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
+      {description && <p className={styles.subtitle}>{description}</p>}
     </div>
   );
 }

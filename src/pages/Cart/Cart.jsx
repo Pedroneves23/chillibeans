@@ -1,15 +1,13 @@
 import { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Trash2, ShoppingBag, ArrowRight, ShieldCheck, Truck } from 'lucide-react';
 import { useCart } from '../../contexts/CartContext';
-import { formatCurrency, formatInstallment } from '../../utils/formatCurrency';
+import { formatCurrency } from '../../utils/formatCurrency';
 import Button from '../../components/Button';
-import SectionTitle from '../../components/SectionTitle';
 import styles from './Cart.module.css';
 
 export default function Cart() {
-  const { cart, removeFromCart, updateQuantity, clearCart, cartTotal, cartItemsCount } = useCart();
-  const navigate = useNavigate();
+  const { items, removeFromCart, updateQuantity, clearCart, cartTotal, cartItemsCount } = useCart();
 
   const [cep, setCep] = useState('');
   const [shippingCalculated, setShippingCalculated] = useState(false);
@@ -50,7 +48,7 @@ export default function Cart() {
 
   const finalTotal = Math.max(0, cartTotal - discount + (shippingCalculated ? shippingCost : 0));
 
-  if (cart.length === 0) {
+  if (items.length === 0) {
     return (
       <div className={`container ${styles.emptyContainer}`}>
         <ShoppingBag size={56} className={styles.emptyIcon} />
@@ -84,8 +82,8 @@ export default function Cart() {
               <span>SUBTOTAL</span>
             </div>
 
-            {cart.map((item) => (
-              <div key={`${item.id}-${item.selectedColor || ''}`} className={styles.cartItem}>
+            {items.map((item) => (
+              <div key={`${item.id}-${item.cor || ''}`} className={styles.cartItem}>
                 <div className={styles.itemInfo}>
                   <Link to={`/produto/${item.slug}`} className={styles.itemThumb}>
                     <img src={item.imagem} alt={item.nome} />
@@ -94,13 +92,13 @@ export default function Cart() {
                     <Link to={`/produto/${item.slug}`} className={styles.itemName}>
                       {item.nome}
                     </Link>
-                    {item.selectedColor && (
-                      <span className={styles.itemColor}>Cor: {item.selectedColor}</span>
+                    {item.cor && (
+                      <span className={styles.itemColor}>Cor: {item.cor}</span>
                     )}
                     <span className={styles.itemUnitPrice}>{formatCurrency(item.preco)}</span>
                     <button
                       className={styles.removeBtn}
-                      onClick={() => removeFromCart(item.id, item.selectedColor)}
+                      onClick={() => removeFromCart(item.id, item.cor)}
                       aria-label="Remover item"
                     >
                       <Trash2 size={14} /> Remover
@@ -112,14 +110,14 @@ export default function Cart() {
                   <div className={styles.qtyControl}>
                     <button
                       className={styles.qtyBtn}
-                      onClick={() => updateQuantity(item.id, item.quantity - 1, item.selectedColor)}
+                      onClick={() => updateQuantity(item.id, item.cor, item.quantidade - 1)}
                     >
                       -
                     </button>
-                    <span className={styles.qtyValue}>{item.quantity}</span>
+                    <span className={styles.qtyValue}>{item.quantidade}</span>
                     <button
                       className={styles.qtyBtn}
-                      onClick={() => updateQuantity(item.id, item.quantity + 1, item.selectedColor)}
+                      onClick={() => updateQuantity(item.id, item.cor, item.quantidade + 1)}
                     >
                       +
                     </button>
@@ -127,7 +125,7 @@ export default function Cart() {
                 </div>
 
                 <div className={styles.itemTotal}>
-                  <span>{formatCurrency(item.preco * item.quantity)}</span>
+                  <span>{formatCurrency(item.preco * item.quantidade)}</span>
                 </div>
               </div>
             ))}

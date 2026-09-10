@@ -92,7 +92,7 @@ export default function Header() {
             >
               <SearchIcon size={20} />
             </button>
-            <Link to="/checkout" className={styles.actionBtn} aria-label="Minha conta">
+            <Link to="/login" className={styles.actionBtn} aria-label="Minha conta">
               <User size={20} />
             </Link>
             <Link to="/carrinho" className={styles.cartBtn} aria-label="Carrinho de compras">

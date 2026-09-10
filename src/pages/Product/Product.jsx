@@ -137,7 +137,7 @@ export default function Product() {
               )}
             </div>
             <p className={styles.installment}>
-              {formatInstallment(product.preco, product.parcelas)} sem juros
+              {formatInstallment(product.preco, product.parcelas)}
             </p>
           </div>
 

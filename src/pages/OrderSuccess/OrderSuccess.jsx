@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { CheckCircle2, Package, Calendar, ArrowRight, Printer } from 'lucide-react';
+import { CheckCircle2, Package, ArrowRight, Printer } from 'lucide-react';
 import { formatCurrency } from '../../utils/formatCurrency';
 import Button from '../../components/Button';
 import styles from './OrderSuccess.module.css';
@@ -62,9 +61,9 @@ export default function OrderSuccess() {
                     <img src={item.imagem} alt={item.nome} className={styles.itemImg} />
                     <div className={styles.itemDetails}>
                       <span className={styles.itemName}>{item.nome}</span>
-                      <span className={styles.itemSub}>Qtd: {item.quantity} {item.selectedColor && `• ${item.selectedColor}`}</span>
+                      <span className={styles.itemSub}>Qtd: {item.quantidade} {item.cor && `• ${item.cor}`}</span>
                     </div>
-                    <span className={styles.itemPrice}>{formatCurrency(item.preco * item.quantity)}</span>
+                    <span className={styles.itemPrice}>{formatCurrency(item.preco * item.quantidade)}</span>
                   </div>
                 ))}
               </div>
