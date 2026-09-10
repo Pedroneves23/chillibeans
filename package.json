@@ -6,7 +6,7 @@
   "description": "E-commerce premium para CHILLI BEANS — óculos de sol e grau",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node -e \"const fs = require('fs'); const src = fs.existsSync('dist/index.dev.html') ? 'dist/index.dev.html' : 'dist/index.html'; fs.copyFileSync(src, 'index.html'); fs.copyFileSync(src, 'dist/index.html'); fs.mkdirSync('docs', { recursive: true }); fs.copyFileSync(src, 'docs/index.html');\"",
+    "build": "vite build && node scripts/embed-images.cjs",
     "preview": "vite preview"
   },
   "dependencies": {
