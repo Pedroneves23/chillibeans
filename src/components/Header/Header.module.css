@@ -196,7 +196,4 @@
     gap: var(--space-2);
   }
 
-  .actionBtn:nth-child(2) {
-    display: none;
-  }
 }

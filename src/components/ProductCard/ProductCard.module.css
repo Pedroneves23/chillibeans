@@ -101,9 +101,9 @@
 .category {
   display: block;
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 500;
-  letter-spacing: var(--tracking-widest);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-gray-500);
   margin-top: var(--space-1);
@@ -170,7 +170,14 @@
   }
 
   .name {
-    font-size: var(--text-sm);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .category {
+    font-size: 9px;
+    letter-spacing: 0.1em;
   }
 
   .price {

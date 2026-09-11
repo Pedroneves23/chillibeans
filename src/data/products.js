@@ -25,6 +25,23 @@ const lifestyleImages = [
   '/images/lifestyle/parque-titanio.jpg',
 ];
 
+const catalogImages = {
+  'aviador-classico': ['aviador-classico-editorial.png', 'aviador-classico-hover.png'],
+  'berlin-acetato': ['berlin-acetato-editorial.png', 'berlin-acetato-hover.png'],
+  'manhattan-square': ['manhattan-square-editorial.png', 'manhattan-square-hover.png'],
+  'riviera-cat-eye': ['riviera-cat-eye-editorial.png', 'riviera-cat-eye-hover.png'],
+  'tokyo-round': ['tokyo-round-editorial.png', 'tokyo-round-hover.png'],
+  'milano-pilot': ['milano-pilot-editorial.png', 'milano-pilot-hover.png'],
+  'safari-oversized': ['safari-oversized-editorial.png', 'safari-oversized-hover.png'],
+  'soho-retro': ['soho-retro-editorial.png', 'soho-retro-hover.png'],
+  'havana-intelectual': ['havana-intelectual-editorial.png', 'havana-intelectual-hover.png'],
+  'oxford-scholar': ['oxford-scholar-editorial.png', 'oxford-scholar-hover.png'],
+  'brooklyn-vintage': ['brooklyn-vintage-editorial.png', 'brooklyn-vintage-hover.png'],
+  'vienna-titanium': ['vienna-titanium-editorial.png', 'vienna-titanium-hover.png'],
+  'paris-elegance': ['paris-elegance-editorial.png', 'paris-elegance-hover.png'],
+  'monaco-sport': ['monaco-sport-editorial.png', 'monaco-sport-hover.png'],
+};
+
 const products = [
   {
     id: 1,
@@ -322,9 +339,10 @@ const products = [
   },
 ];
 
-products.forEach((product, index) => {
-  product.imagem = lifestyleImages[index % lifestyleImages.length];
-  product.imagemHover = lifestyleImages[(index + 1) % lifestyleImages.length];
+products.forEach((product) => {
+  const [editorialImage, hoverImage] = catalogImages[product.slug];
+  product.imagem = `/images/products/${editorialImage}`;
+  product.imagemHover = `/images/products/${hoverImage}`;
 });
 
 export default products;

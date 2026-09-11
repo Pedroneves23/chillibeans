@@ -17,7 +17,7 @@
     rgba(0, 0, 0, 0.22) 75%,
     rgba(0, 0, 0, 0.48) 100%
   ),
-  url('/images/hero-elegancia-exclusiva.jpg');
+  url('/images/hero-oculos-editorial.png');
   background-size: cover;
   background-position: center;
   color: var(--color-white);
@@ -223,13 +223,13 @@
 
 .solarCard .categoryCardBg {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 8%, rgba(0, 0, 0, 0.08) 78%),
-    url('/images/lifestyle/litoral-aviador.jpg');
+    url('/images/categoria-oculos-sol-luxo.png');
   background-position: center;
 }
 
 .grauCard .categoryCardBg {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 8%, rgba(0, 0, 0, 0.1) 78%),
-    url('/images/lifestyle/museu-oculos-grau.jpg');
+    url('/images/categoria-armacao-grau-luxo.png');
   background-position: center;
 }
 
@@ -343,5 +343,6 @@
   }
   .hero {
     min-height: 75vh;
+    background-position: 62% center;
   }
 }
