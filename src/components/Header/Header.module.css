@@ -196,4 +196,10 @@
     gap: var(--space-2);
   }
 
+  /* Mantém a busca no espaço entre o menu e a marca, sem disputar o logo. */
+  .actions .actionBtn:first-child {
+    position: absolute;
+    left: calc(var(--gutter) + 36px);
+  }
+
 }
