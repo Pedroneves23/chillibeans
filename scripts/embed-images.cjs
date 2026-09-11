@@ -29,6 +29,10 @@ function embedImages(directory, publicPath = '/images') {
 
     const image = fs.readFileSync(diskPath);
     const dataUri = `data:${mimeType};base64,${image.toString('base64')}`;
+    // Vite transforma URLs de CSS em "./images/..." quando a base é relativa.
+    // Substitua essa forma completa antes da versão absoluta para não deixar
+    // um ponto inválido antes de uma data URI no HTML final.
+    html = html.replaceAll(`.${relativePath}`, dataUri);
     html = html.replaceAll(relativePath, dataUri);
   }
 }
