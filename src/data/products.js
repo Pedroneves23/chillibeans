@@ -9,37 +9,37 @@
  */
 
 const productImages = {
-  aviator: '/images/oculos-aviador-dourado.png',
-  catEye: '/images/oculos-cat-eye-preto.png',
-  optical: '/images/oculos-havana.png',
+  aviator: './images/oculos-aviador-dourado.png',
+  catEye: './images/oculos-cat-eye-preto.png',
+  optical: './images/oculos-havana.png',
 };
 
 // Campanha editorial: cada produto recebe uma cena diferente e, no hover,
 // exibe a próxima cena para tornar o catálogo mais vivo.
 const lifestyleImages = [
-  '/images/lifestyle/litoral-aviador.jpg',
-  '/images/lifestyle/praia-havana.jpg',
-  '/images/lifestyle/cidade-cat-eye.jpg',
-  '/images/lifestyle/rooftop-redondo.jpg',
-  '/images/lifestyle/museu-oculos-grau.jpg',
-  '/images/lifestyle/parque-titanio.jpg',
+  './images/lifestyle/litoral-aviador.jpg',
+  './images/lifestyle/praia-havana.jpg',
+  './images/lifestyle/cidade-cat-eye.jpg',
+  './images/lifestyle/rooftop-redondo.jpg',
+  './images/lifestyle/museu-oculos-grau.jpg',
+  './images/lifestyle/parque-titanio.jpg',
 ];
 
 const catalogImages = {
-  'aviador-classico': ['/images/products/aviador-classico-editorial.png', '/images/products/aviador-classico-hover.png'],
-  'berlin-acetato': ['/images/products/berlin-acetato-editorial.png', '/images/products/berlin-acetato-hover.png'],
-  'manhattan-square': ['/images/products/manhattan-square-editorial.png', '/images/products/manhattan-square-hover.png'],
-  'riviera-cat-eye': ['/images/products/riviera-cat-eye-editorial.png', '/images/products/riviera-cat-eye-hover.png'],
-  'tokyo-round': ['/images/products/tokyo-round-editorial.png', '/images/products/tokyo-round-hover.png'],
-  'milano-pilot': ['/images/products/milano-pilot-editorial.png', '/images/products/milano-pilot-hover.png'],
-  'safari-oversized': ['/images/products/safari-oversized-editorial.png', '/images/products/safari-oversized-hover.png'],
-  'soho-retro': ['/images/products/soho-retro-editorial.png', '/images/products/soho-retro-hover.png'],
-  'havana-intelectual': ['/images/products/havana-intelectual-editorial.png', '/images/products/havana-intelectual-hover.png'],
-  'oxford-scholar': ['/images/products/oxford-scholar-editorial.png', '/images/products/oxford-scholar-hover.png'],
-  'brooklyn-vintage': ['/images/products/brooklyn-vintage-editorial.png', '/images/products/brooklyn-vintage-hover.png'],
-  'vienna-titanium': ['/images/products/vienna-titanium-editorial.png', '/images/products/vienna-titanium-hover.png'],
-  'paris-elegance': ['/images/products/paris-elegance-editorial.png', '/images/products/paris-elegance-hover.png'],
-  'monaco-sport': ['/images/products/monaco-sport-editorial.png', '/images/products/monaco-sport-hover.png'],
+  'aviador-classico': ['./images/products/aviador-classico-editorial.png', './images/products/aviador-classico-hover.png'],
+  'berlin-acetato': ['./images/products/berlin-acetato-editorial.png', './images/products/berlin-acetato-hover.png'],
+  'manhattan-square': ['./images/products/manhattan-square-editorial.png', './images/products/manhattan-square-hover.png'],
+  'riviera-cat-eye': ['./images/products/riviera-cat-eye-editorial.png', './images/products/riviera-cat-eye-hover.png'],
+  'tokyo-round': ['./images/products/tokyo-round-editorial.png', './images/products/tokyo-round-hover.png'],
+  'milano-pilot': ['./images/products/milano-pilot-editorial.png', './images/products/milano-pilot-hover.png'],
+  'safari-oversized': ['./images/products/safari-oversized-editorial.png', './images/products/safari-oversized-hover.png'],
+  'soho-retro': ['./images/products/soho-retro-editorial.png', './images/products/soho-retro-hover.png'],
+  'havana-intelectual': ['./images/products/havana-intelectual-editorial.png', './images/products/havana-intelectual-hover.png'],
+  'oxford-scholar': ['./images/products/oxford-scholar-editorial.png', './images/products/oxford-scholar-hover.png'],
+  'brooklyn-vintage': ['./images/products/brooklyn-vintage-editorial.png', './images/products/brooklyn-vintage-hover.png'],
+  'vienna-titanium': ['./images/products/vienna-titanium-editorial.png', './images/products/vienna-titanium-hover.png'],
+  'paris-elegance': ['./images/products/paris-elegance-editorial.png', './images/products/paris-elegance-hover.png'],
+  'monaco-sport': ['./images/products/monaco-sport-editorial.png', './images/products/monaco-sport-hover.png'],
 };
 
 const products = [

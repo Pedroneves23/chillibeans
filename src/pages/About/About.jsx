@@ -27,7 +27,7 @@ export default function About() {
         <div className={styles.contentGrid}>
           <div className={styles.imageBlock}>
             <img
-              src="/images/oculos-cat-eye-preto.png"
+              src="./images/oculos-cat-eye-preto.png"
               alt="Estilo e Atitude Chilli Beans"
               className={styles.storyImg}
             />
