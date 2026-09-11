@@ -224,13 +224,19 @@
 .solarCard .categoryCardBg {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 8%, rgba(0, 0, 0, 0.08) 78%),
     url('/images/categoria-oculos-sol-luxo.png');
-  background-position: center;
+  background-color: #160907;
+  background-size: 82% auto;
+  background-position: center 34%;
+  background-repeat: no-repeat;
 }
 
 .grauCard .categoryCardBg {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 8%, rgba(0, 0, 0, 0.1) 78%),
     url('/images/categoria-armacao-grau-luxo.png');
-  background-position: center;
+  background-color: #2b1b15;
+  background-size: 82% auto;
+  background-position: center 34%;
+  background-repeat: no-repeat;
 }
 
 .categoryContent {
