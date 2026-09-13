@@ -225,8 +225,8 @@
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 8%, rgba(0, 0, 0, 0.08) 78%),
     url('./images/categoria-oculos-sol-luxo.png');
   background-color: #160907;
-  /* Preenche todo o card mantendo a proporção da imagem, sem faixas laterais. */
-  background-size: cover;
+  /* Mostra a imagem inteira, sem corte. */
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -235,8 +235,8 @@
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 8%, rgba(0, 0, 0, 0.1) 78%),
     url('./images/categoria-armacao-grau-luxo.png');
   background-color: #2b1b15;
-  /* Preenche todo o card mantendo a proporção da imagem, sem faixas laterais. */
-  background-size: cover;
+  /* Mostra a imagem inteira, sem corte. */
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
